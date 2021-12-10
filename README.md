@@ -1,3 +1,9 @@
 # StudySpring
-参考https://www.cnblogs.com/harrychinese/p/springboot_tomcat_deploy.html
+参考
+https://www.cnblogs.com/harrychinese/p/springboot_tomcat_deploy.html
+https://szh-forever-young.blog.csdn.net/article/details/117029333
 
+运行方式
+1、直接idea运行
+2、打包mvn package -Dmaven.test.skip=true，使用指令java -jar springdemo.war运行
+3、war包放到tomcat运行
