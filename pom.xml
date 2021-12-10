@@ -82,6 +82,12 @@
                     <include>*.*</include>
                 </includes>
             </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
             <!-- 将 java 目录下的下面文件以资源文件的形式打包到jar输出文件中 -->
             <resource>
                 <directory>src/main/java</directory>
