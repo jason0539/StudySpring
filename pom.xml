@@ -15,11 +15,10 @@
     <artifactId>SpringDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!-- 打包形式修改为 war -->
-    <packaging>war</packaging>
-
     <name>springdemo</name>
     <url>http://maven.apache.org</url>
+    <!-- 打包形式修改为 war -->
+    <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -39,26 +38,19 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
-        <!-- 添加jsp支持 -->
+
+        <!-- 支持jsp -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
-            <!--<scope>provided</scope>-->
-            <!-- 如果不注释，你会发现main线程运行报404错误，必须使用 spring-boot:run这个命令运行才行。所以我们注释掉-->
         </dependency>
 
         <!-- spring-boot-devtools, 在开发过程中支持Auto restart 和 auto reload, 打包为war/jar不会包含该依赖.-->
+        <!-- 删除后无法热加载       -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <!-- optional=true,依赖不会传递，该项目依赖devtools；之后依赖myboot项目的项目如果想要使用devtools，需要重新引入 -->
             <optional>true</optional>
-        </dependency>
-
-        <!--使用freemarker的starter，里面包含spring-boot-starter-web组件-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
     </dependencies>
 
