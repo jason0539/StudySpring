@@ -17,10 +17,10 @@ public class UserController {
     @RequestMapping(value = "/user/detail")
     @ResponseBody
     public Object userDetail() {
-        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap();
         map.put("id", 1001);
-        map.put("username", "张起灵");
-        return map;
+        map.put("username", "jason");
+        return map.toString();
     }
 
     @RequestMapping(value = "/user/detail/page")

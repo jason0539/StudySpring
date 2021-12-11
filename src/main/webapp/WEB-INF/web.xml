@@ -5,21 +5,40 @@
         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
 
+    <!--  默认欢迎页 -->
     <welcome-file-list>
-        <welcome-file>userDetail.jsp</welcome-file>
+        <welcome-file>/WEB-INF/pages/index.jsp</welcome-file>
     </welcome-file-list>
-    <display-name>haha</display-name>
 
     <!--DispatcherServlet-->
     <servlet>
-        <servlet-name>springmvc-deom</servlet-name>
+        <servlet-name>springdemo</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
         <async-supported>true</async-supported>
     </servlet>
+
+    <!--  拦截所有请求，转给DispatcherServlet后分发给controller处理  -->
     <servlet-mapping>
-        <servlet-name>springmvc-deom</servlet-name>
+        <servlet-name>springdemo</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!-- Other XML Configuration -->
+    <!-- Load by Spring ContextLoaderListener -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/root-context.xml</param-value>
+    </context-param>
+
+    <!-- Spring ContextLoaderListener -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!--404错误页面-->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/pages/404.jsp</location>
+    </error-page>
 </web-app>
