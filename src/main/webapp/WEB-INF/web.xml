@@ -6,19 +6,19 @@
          version="3.0">
 
     <welcome-file-list>
-        <welcome-file>userDetail.jsp</welcome-file>
+        <welcome-file>/index.html</welcome-file>
     </welcome-file-list>
     <display-name>haha</display-name>
 
     <!--DispatcherServlet-->
     <servlet>
-        <servlet-name>springmvc-deom</servlet-name>
+        <servlet-name>springdemo</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
         <async-supported>true</async-supported>
     </servlet>
     <servlet-mapping>
-        <servlet-name>springmvc-deom</servlet-name>
+        <servlet-name>springdemo</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
