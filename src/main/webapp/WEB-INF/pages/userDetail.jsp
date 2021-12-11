@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=utf-8" language="java" %>
 <html>
 <head>
-    <title>$</title>
+    <title>halo world</title>
 </head>
 <body>
 <h3>用户编号：${id}</h3>
