@@ -14,6 +14,10 @@ public class LogUtils {
         System.out.println(LOG_PREFIX + aClass.getSimpleName() + LOG_SPLIT + info);
     }
 
+    public static final void line() {
+        System.out.println();
+    }
+
     public static final void info(Object obj, List<String> info) {
         Class<?> aClass = obj.getClass();
         System.out.println(LOG_PREFIX + aClass.getSimpleName() + LOG_SPLIT + info);

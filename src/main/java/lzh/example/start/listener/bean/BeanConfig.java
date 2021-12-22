@@ -13,8 +13,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BeanConfig {
     @Bean(initMethod = "init")
-    public BeanC beanC() {
-        LogUtils.info(this, "init beanC");
-        return new BeanC();
+    public BeanB beanB() {
+        LogUtils.line();
+        LogUtils.info(this, "init beanB");
+        return new BeanB();
     }
 }

@@ -21,7 +21,8 @@ public class BeanA implements InitializingBean {
 
     @PostConstruct
     public void testPostContruct() {
-        LogUtils.info(this, "testPostContruct, beanB is " + beanB);
+        LogUtils.line();
+        LogUtils.info(this, "testPostContruct, beanB name is " + beanB.getName());
     }
 
     /**
@@ -29,6 +30,7 @@ public class BeanA implements InitializingBean {
      */
     @Override
     public void afterPropertiesSet() throws Exception {
-        LogUtils.info(this, "afterPropertiesSet, beanB is " + beanB);
+        LogUtils.info(this, "afterPropertiesSet, beanB name is " + beanB.getName());
+        LogUtils.line();
     }
 }
