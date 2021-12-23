@@ -27,6 +27,7 @@ public class BeanA implements InitializingBean {
 
     /**
      * 调用改方法时，spring保证当前bean依赖的所有属性都已经注入完成，postConstruct不保证
+     * https://mp.weixin.qq.com/s/EYdlqWzBSF0YKjvw6n5JeA
      */
     @Override
     public void afterPropertiesSet() throws Exception {

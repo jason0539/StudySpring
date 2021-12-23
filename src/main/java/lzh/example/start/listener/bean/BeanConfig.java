@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class BeanConfig {
-    @Bean(initMethod = "init")
+    @Bean(initMethod = "init", destroyMethod = "destroyIt")
     public BeanB beanB() {
         LogUtils.line();
         LogUtils.info(this, "init beanB");
